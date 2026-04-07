@@ -3,8 +3,8 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/alcohol-and-tobacco-tax-and-trade-bureau/refs/heads/main/apis.yml
 name: Alcohol and Tobacco Tax and Trade Bureau
 tags:
-  - Federal Government
   - Alcohol
+  - Federal Government
   - Tobacco
 type: Contract
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
