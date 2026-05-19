@@ -85,6 +85,8 @@ apis:
         url: https://www.ttb.gov/permitting/permits-online
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/alcohol-and-tobacco-tax-and-trade-bureau
   - type: Website
     url: https://www.ttb.gov
   - type: Portal
