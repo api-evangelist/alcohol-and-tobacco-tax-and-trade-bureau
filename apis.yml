@@ -85,6 +85,8 @@ apis:
         url: https://www.ttb.gov/permitting/permits-online
 
 common:
+  - type: DomainSecurity
+    url: security/alcohol-and-tobacco-tax-and-trade-bureau-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/alcohol-and-tobacco-tax-and-trade-bureau
   - type: Website
