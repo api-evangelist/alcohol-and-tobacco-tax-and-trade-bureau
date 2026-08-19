@@ -40,7 +40,7 @@ description: >-
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: alcohol-and-tobacco-tax-and-trade-bureau:ttb-open-data-api
     name: TTB Open Data API
