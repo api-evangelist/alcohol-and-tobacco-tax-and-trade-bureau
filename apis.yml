@@ -43,7 +43,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/alcohol-and-tobacco-tax-and-trade-bureau.png
 access: 3rd-Party
 created: '2024-11-21T00:00:00.000Z'
-modified: '2026-04-19'
+modified: '2026-09-01'
 position: Consuming
 description: >-
   The Alcohol and Tobacco Tax and Trade Bureau (TTB), statutorily named the Tax
@@ -61,80 +61,142 @@ maintainers:
 specificationVersion: '0.23'
 apis:
   - aid: alcohol-and-tobacco-tax-and-trade-bureau:ttb-open-data-api
-    name: TTB Open Data API
+    name: TTB Open Data
     tags:
       - Open Data
-      - Socrata
       - Excise Tax
-    humanURL: https://www.ttb.gov/open-government/open-data
+      - Statistics
+      - DCAT-US
+    humanURL: https://www.ttb.gov/data
+    baseURL: https://www.ttb.gov
     description: >-
-      The TTB Open Data API provides programmatic access to TTB statistical and
-      regulatory datasets via the Socrata Open Data API (SODA). Available
-      datasets include alcohol beverage tax collections by commodity and state,
-      federal basic permit holders, approved Certificate of Label Approval (COLA)
-      records, and brewery/winery/distillery permit data. The SODA API supports
-      filtering, sorting, pagination, and JSON/CSV output formats.
+      TTB's open data surface is a set of static, anonymously downloadable files rather than a
+      request/response API. Production and operations reports for beer, wine, distilled spirits
+      and tobacco are published as JSON and CSV under /system/files/<YYYY-MM>/, and two
+      processing-time feeds are refreshed daily as XML and CSV under /images/foia/. There is no
+      OpenAPI, no query API, no API key and no rate limit; format is selected by choosing a
+      different file, not by content negotiation. Dataset metadata is published in Project Open
+      Data / DCAT-US 1.1 form inside the Department of the Treasury catalog, where 34 records
+      carry publisher.name "TTB".
+    x-base-url-note: >-
+      TTB states no API base URL because it ships no API. www.ttb.gov is the host that actually
+      serves every machine-readable file; the two prefixes in use are /system/files/<YYYY-MM>/
+      for bulk datasets and /images/foia/ for the daily processing-time feeds.
     properties:
-      - type: DataAPI
-        url: https://data.ttb.gov/resource/
+      - type: DataCatalog
+        url: json-ld/alcohol-and-tobacco-tax-and-trade-bureau-dcat-us.jsonld
+      - type: Documentation
+        url: https://www.ttb.gov/statistics/reports-and-data
+      - type: DataFeed
+        name: Label application processing times (XML, daily)
+        url: https://www.ttb.gov/images/foia/cola_stats.xml
+      - type: DataFeed
+        name: Beverage alcohol formula processing times (CSV, daily)
+        url: https://www.ttb.gov/images/foia/form_stats.csv
+      - type: DataFeed
+        name: Tobacco products production and operations (JSON)
+        url: https://www.ttb.gov/system/files/2024-08/Tobacco_Products_Data.json
+      - type: DataFeed
+        name: Beer national report (JSON)
+        url: https://www.ttb.gov/system/files/2025-05/Beer_National_Report_JSON.json
+      - type: DataFeed
+        name: Wine data (JSON)
+        url: https://www.ttb.gov/system/files/2024-08/Wine_Data.json
+      - type: DataFeed
+        name: Distilled spirits data (JSON)
+        url: https://www.ttb.gov/system/files/2024-08/Distilled_Spirits_Data.json
 
   - aid: alcohol-and-tobacco-tax-and-trade-bureau:ttb-cola-registry
-    name: TTB COLA Registry
+    name: TTB Public COLA Registry
     tags:
       - Alcohol Beverage Labels
       - COLA
       - Open Data
-    humanURL: https://www.ttb.gov/labeling/cola-registry
+      - Lookup
+    humanURL: https://www.ttb.gov/regulated-commodities/labeling/cola-public-registry
+    baseURL: https://www.ttbonline.gov/colasonline/
     description: >-
-      The TTB Public COLA (Certificate of Label Approval) Registry provides
-      access to approved alcohol beverage labels. Users and industry members
-      can search for approved labels by product type, brand name, filer name,
-      and approval date. The registry covers wine, distilled spirits, and malt
-      beverage label approvals required before commercial sale in interstate or
-      foreign commerce.
+      The Public COLA Registry holds every approved, expired, surrendered or revoked Certificate
+      of Label Approval (TTB F 5100.31) for wine, distilled spirits and malt beverages. It needs
+      no registration or password. It is also the only parameterised, addressable lookup TTB
+      documents anywhere: GET publicSearchColasBasic.do?action=publicDisplaySearchBasic&ttbid=
+      followed by a 14-character TTB ID returns that COLA's detail page. The response is
+      rendered HTML rather than JSON or XML, so a machine consumer must scrape it.
     properties:
-      - type: DataAPI
-        url: https://www.ttb.gov/labeling/cola-registry
+      - type: Lookup
+        name: COLA detail by TTB ID
+        url: https://www.ttbonline.gov/colasonline/publicSearchColasBasic.do?action=publicDisplaySearchBasic&ttbid=
+      - type: Documentation
+        url: https://www.ttb.gov/regulated-commodities/labeling/cola-public-registry
 
   - aid: alcohol-and-tobacco-tax-and-trade-bureau:ttb-permits-online
-    name: TTB Permits Online
+    name: TTB Permits Online (PONL)
     tags:
       - Permits
       - Licensing
       - Alcohol
       - Tobacco
-    humanURL: https://www.ttb.gov/permitting/permits-online
+    humanURL: https://www.ttb.gov/online-services/ponl/permits-online-help
+    baseURL: https://www.ttbonline.gov/permitsonline/
     description: >-
-      TTB Permits Online is the electronic portal for applying for and managing
-      federal basic permits, brewer's notices, distilled spirits plant permits,
-      and tobacco permits. The system allows industry members to submit permit
-      applications, file operational reports, and pay federal excise taxes
-      electronically. Permit status and holder data are published as open data.
+      Permits Online is the electronic system for applying for and maintaining federal basic
+      permits, brewer's notices, distilled spirits plant registrations and tobacco permits.
+      There is no fee at the federal level to apply. It is an authenticated web application
+      entered through a form login with a registered TTB.gov account; it exposes no API, no
+      token endpoint and no programmatic interface. Its only open-data output is the daily
+      permit application processing-time statistic published on ttb.gov.
     properties:
-      - type: GovernmentAPI
-        url: https://www.ttb.gov/permitting/permits-online
+      - type: Application
+        url: https://www.ttbonline.gov/permitsonline/
+      - type: Documentation
+        url: https://www.ttb.gov/online-services/ponl/permits-online-help
+      - type: DataFeed
+        name: Permit application processing times
+        url: https://www.ttb.gov/nrc/statistics-original-applications-to-operate
 
 common:
-  - type: DomainSecurity
-    url: security/alcohol-and-tobacco-tax-and-trade-bureau-domain-security.yml
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/alcohol-and-tobacco-tax-and-trade-bureau
   - type: Website
     url: https://www.ttb.gov
   - type: Portal
-    url: https://www.ttb.gov/open-government/open-data
-  - type: DataPortal
-    url: https://data.ttb.gov
+    url: https://www.ttb.gov/data
   - type: Documentation
-    url: https://www.ttb.gov/about-ttb/laws-and-regulations
+    url: https://www.ttb.gov/statistics/reports-and-data
+  - type: DataPortal
+    url: https://www.ttb.gov/statistics
+  - type: GettingStarted
+    url: https://www.ttb.gov/public-information/researcher-resources
+  - type: Support
+    url: https://www.ttb.gov/about-ttb/contact-us
   - type: Contact
-    url: https://www.ttb.gov/contact
+    url: https://www.ttb.gov/about-ttb/contact-us
   - type: PrivacyPolicy
     url: https://www.ttb.gov/about-ttb/privacy-policy
+  - type: OpenGovernment
+    url: https://www.ttb.gov/about-ttb/other/open-government
+  - type: Regulations
+    url: https://www.ttb.gov/laws-regulations-and-public-guidance
   - type: FOIA
-    url: https://www.ttb.gov/about-ttb/foia
-  - type: GitHubOrganization
-    url: https://github.com/ttb-gov
+    url: https://www.ttb.gov/public-information/foia
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/alcohol-and-tobacco-tax-and-trade-bureau
+  - type: LLMsTxt
+    url: llms/alcohol-and-tobacco-tax-and-trade-bureau-llms.txt
+  - type: DataCatalog
+    url: json-ld/alcohol-and-tobacco-tax-and-trade-bureau-dcat-us.jsonld
+  - type: Conformance
+    url: conformance/alcohol-and-tobacco-tax-and-trade-bureau-conformance.yml
+  - type: Conventions
+    url: conventions/alcohol-and-tobacco-tax-and-trade-bureau-conventions.yml
+  - type: Authentication
+    url: authentication/alcohol-and-tobacco-tax-and-trade-bureau-authentication.yml
+  - type: Lifecycle
+    url: lifecycle/alcohol-and-tobacco-tax-and-trade-bureau-lifecycle.yml
+  - type: RateLimits
+    url: rate-limits/alcohol-and-tobacco-tax-and-trade-bureau-rate-limits.yml
+  - type: Plans
+    url: plans/alcohol-and-tobacco-tax-and-trade-bureau-plans-pricing.yml
+  - type: DomainSecurity
+    url: security/alcohol-and-tobacco-tax-and-trade-bureau-domain-security.yml
   - type: Features
     data:
       - name: Excise Tax Data
@@ -177,3 +239,28 @@ common:
         description: TTB coordinates with U.S. Customs and Border Protection on alcohol and tobacco import regulation and taxation.
       - name: ATF
         description: TTB works with the Bureau of Alcohol, Tobacco, Firearms and Explosives on shared jurisdiction over alcohol and tobacco regulation.
+
+x-enrichment:
+  date: '2026-09-01'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1
+
+x-coverage:
+  state: covered
+  reason: no-machine-readable-spec
+  detail: >-
+    TTB publishes real, live, daily-refreshed open data (XML/CSV/JSON) and 34 DCAT-US 1.1
+    dataset records under the Treasury catalog, but no OpenAPI, GraphQL, AsyncAPI, MCP or agent
+    card on any host; the data.ttb.gov Socrata portal previously recorded for this provider does
+    not resolve at all.
+  evidence:
+    - url: https://www.ttb.gov/images/foia/cola_stats.xml
+      status: 200
+    - url: https://www.treasury.gov/data.json
+      status: 200
+    - url: https://www.ttb.gov/openapi.json
+      status: 404
+    - url: https://data.ttb.gov/resource/
+      status: 0
+  checked: '2026-09-01'

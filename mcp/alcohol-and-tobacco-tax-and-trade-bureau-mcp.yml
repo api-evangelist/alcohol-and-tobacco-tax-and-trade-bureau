@@ -1,0 +1,35 @@
+generated: '2026-09-01'
+method: searched
+status: none
+source: >-
+  Searched the TTB site, the Treasury DCAT-US catalog, npm (@modelcontextprotocol and
+  keyword search) and PyPI for a first-party TTB MCP server, 2026-09-01
+note: >-
+  No MCP server exists for TTB, first-party or otherwise, and none could honestly be derived:
+  the DERIVE fallback in this pipeline builds a candidate tool list from OpenAPI operationIds,
+  and TTB publishes no OpenAPI. The only addressable, parameterised operation TTB documents is
+  the COLA Public Registry lookup by TTB ID, which returns HTML rather than structured data —
+  a single HTML-scraping tool is not a tool surface worth asserting. No MCPServer pointer is
+  wired into apis.yml, because doing so would credit TTB with an agent surface it does not run.
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: none
+  verified: searched
+server: null
+tools: []
+derivation_blocked:
+  reason: no-openapi
+  detail: >-
+    STEP 0b contract discovery found no OpenAPI, GraphQL SDL, MCP tools/list or A2A agent card
+    on any TTB host. See conformance/alcohol-and-tobacco-tax-and-trade-bureau-conformance.yml
+    and well-known/alcohol-and-tobacco-tax-and-trade-bureau-well-known.yml for the probe record.
+what_would_change_this:
+  - >-
+    A JSON or CSV response from the COLA Public Registry lookup instead of rendered HTML would
+    make the one existing query interface machine-consumable and directly toolable.
+  - >-
+    A stable, undated URL for each bulk dataset (the current /system/files/<YYYY-MM>/ paths move
+    with each vintage) would let a tool fetch "current beer production" without rediscovery.

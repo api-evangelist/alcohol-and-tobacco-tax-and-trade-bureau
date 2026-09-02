@@ -3,101 +3,59 @@ specificationVersion: '0.1'
 schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
 provider: Alcohol and Tobacco Tax and Trade Bureau
 providerId: alcohol-and-tobacco-tax-and-trade-bureau
+generated: '2026-09-01'
+method: searched
+source: >-
+  https://www.ttb.gov/data ; live unauthenticated responses from
+  https://www.ttb.gov/images/foia/cola_stats.xml and
+  https://www.ttb.gov/system/files/2024-08/Tobacco_Products_Data.json, probed 2026-09-01
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-04'
+modified: '2026-09-01'
+limit_count: 0
 tags:
   - Alcohol
   - Tobacco
   - Federal Government
   - Excise Tax
-  - Regulation
-  - Treasury
+  - Open Data
   - Rate Limiting
-  - Quotas
-  - Throttling
-description: Machine-readable rate limit definitions for the Alcohol and Tobacco Tax and Trade Bureau
-  API surface. Captures per-tier quotas, burst behavior, response signaling, and recovery semantics. Defaults
-  are scaffold values to be replaced with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
+description: >-
+  TTB publishes no rate limits, and its responses carry no rate-limit signalling. This file
+  REPLACES a 2026-05-04 bulk-sweep scaffold that asserted free/professional/enterprise tiers at
+  10/100/1000 requests per minute with X-RateLimit-* headers and a 429 on exhaustion. None of
+  that was ever true of TTB: there are no tiers, no API keys, no quota, and no rate-limit
+  headers on any observed response. The real constraint on a consumer is not a quota but the
+  shape of the surface — the data is served as whole static files behind an Akamai cache, so
+  polling more often than the daily refresh returns identical bytes.
+headers: {}
+observed_response_headers:
+  probed: '2026-09-01'
+  url: https://www.ttb.gov/images/foia/cola_stats.xml
+  rate_limit_headers_present: false
+  retry_after_present: false
+  note: >-
+    No RateLimit-*, X-RateLimit-* or Retry-After header on any 200 response from www.ttb.gov.
 responseCodes:
-  throttled: 429
-  quotaExceeded: 429
-  serviceUnavailable: 503
-limits:
-  - tier: free
-    name: Free Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 10
-    burst: 20
-    timeFrame: minute
-    applies:
-      - TTB Open Data API
-      - TTB COLA Registry
-      - TTB Permits Online
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 1000
-    timeFrame: month
-    applies:
-      - TTB Open Data API
-      - TTB COLA Registry
-      - TTB Permits Online
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 100
-    burst: 200
-    timeFrame: minute
-    applies:
-      - TTB Open Data API
-      - TTB COLA Registry
-      - TTB Permits Online
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 100000
-    timeFrame: month
-    applies:
-      - TTB Open Data API
-      - TTB COLA Registry
-      - TTB Permits Online
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
-    scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
-    applies:
-      - TTB Open Data API
-      - TTB COLA Registry
-      - TTB Permits Online
+  throttled: null
+  quotaExceeded: null
+  serviceUnavailable: null
+limits: []
 policies:
-  - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
+  - name: No published limits
+    description: >-
+      TTB documents no request quota, burst ceiling or throttling policy for its open data. The
+      files are served anonymously from an Akamai-fronted origin with no credential to meter
+      against.
+  - name: Refresh cadence is the real ceiling
+    description: >-
+      The daily feeds (cola_stats.xml, form_stats.csv) declare accrualPeriodicity R/P1D in the
+      Treasury DCAT-US catalog and carry a creation_date field in the payload itself. Polling
+      more than once a day yields unchanged content; use the embedded creation_date to detect a
+      new vintage rather than re-downloading on a short interval.
+  - name: Acceptable-use is governed by policy, not by a limiter
+    description: >-
+      Automated access is governed by the TTB privacy policy and legal notice and by the
+      www.ttb.gov robots.txt (HTTP 200, 2,027 bytes), not by an enforced technical limit.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

@@ -1,0 +1,41 @@
+generated: '2026-09-01'
+method: searched
+source: >-
+  registry.npmjs.org search, pypi.org/pypi/<name>/json, and the TTB site, probed 2026-09-01
+note: >-
+  TTB publishes no client libraries in any registry, and no SDK, CLI or SourceCode link exists
+  anywhere in apis.yml or on ttb.gov to derive candidates from. The GitHub organisation
+  previously recorded for TTB, https://github.com/ttb-gov, returns HTTP 404 and has been
+  removed from apis.yml; api.github.com also returns 404 for the orgs ttbgov and ttb-treas-gov.
+  Third-party wrappers around TTB data exist (npm "colacloud", the COLA Cloud CLI, commercial
+  scrapers) but they are built by other companies against scraped TTB HTML, are not first-party,
+  and are deliberately NOT listed here as TTB packages. No SDKs pointer is emitted.
+package_count: 0
+official_package_count: 0
+packages: []
+registries_searched:
+  - registry: npm
+    endpoint: https://registry.npmjs.org/-/v1/search
+    result: no first-party TTB package
+  - registry: pypi
+    endpoint: https://pypi.org/pypi/<name>/json
+    probed: [ttb, ttb-api, ttbapi, cola-registry]
+    result: >-
+      ttb resolves (version 0.3) but is an unrelated Russian-language utility library, not a TTB
+      client; the other three return 404
+  - registry: github-org
+    endpoint: https://api.github.com/orgs/<org>
+    probed: [ttb-gov, ttbgov, ttb-treas-gov]
+    result: 404 on all three
+  - registry: rubygems
+    result: not searched — no evidence of any TTB library in any ecosystem
+  - registry: nuget
+    result: not searched — no evidence of any TTB library in any ecosystem
+  - registry: maven-central
+    result: not searched — no evidence of any TTB library in any ecosystem
+  - registry: crates.io
+    result: not searched — no evidence of any TTB library in any ecosystem
+  - registry: pkg.go.dev
+    result: not searched — no evidence of any TTB library in any ecosystem
+  - registry: packagist
+    result: not searched — no evidence of any TTB library in any ecosystem

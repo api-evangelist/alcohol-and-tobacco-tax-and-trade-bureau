@@ -1,0 +1,1757 @@
+{
+  "@context": "https://project-open-data.cio.gov/v1.1/schema/catalog.jsonld",
+  "@type": "dcat:Catalog",
+  "conformsTo": "https://project-open-data.cio.gov/v1.1/schema",
+  "describedBy": "https://project-open-data.cio.gov/v1.1/schema/catalog.json",
+  "x-apievangelist": {
+    "generated": "2026-09-01",
+    "method": "searched",
+    "source": "https://www.treasury.gov/data.json",
+    "http_status": 200,
+    "note": "Verbatim subset of the U.S. Department of the Treasury Project Open Data / DCAT-US 1.1 catalog, filtered to the records whose dcat publisher.name is \"TTB\" (publisher.subOrganizationOf = Department of the Treasury). TTB itself serves no /data.json \u2014 www.ttb.gov/data.json returns 404 \u2014 so the bureau's machine-readable dataset catalog is published inside its parent department's catalog. Records are unmodified; only the dataset[] array was filtered.",
+    "record_count": 34,
+    "fetched": "2026-09-01"
+  },
+  "dataset": [
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-1",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/business-central/fo/administrative-cases#offers",
+          "downloadURL": "https://www.ttb.gov/what-we-do/enforcement/offers-in-compromise",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "Abstracts of Offers in Compromise (CTR)",
+      "description": "Forms summarizing the Offers in Compromise accepted by TTB under the Collect the Revenue program code.",
+      "keyword": [
+        "Compromise"
+      ],
+      "modified": "2023-06-22",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttb.gov/business-central/fo/administrative-cases#offers"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-2",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/business-central/fo/administrative-cases#offers",
+          "downloadURL": "https://www.ttb.gov/what-we-do/enforcement/offers-in-compromise",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "Abstracts of Offers in Compromise (PTP)",
+      "description": "Forms summarizing the Offers in Compromise accepted by TTB under the Protect the Public program code.",
+      "keyword": [
+        "Compromise"
+      ],
+      "modified": "2023-06-22",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:027"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttb.gov/business-central/fo/administrative-cases#offers"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-3",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/statistics/reports-and-data",
+          "describedBy": "https://www.ttb.gov/glossary",
+          "describedByType": "text/html",
+          "downloadURL": "https://www.ttb.gov/pdfs/statistics/95news06",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "Alcohol and Tobacco Domestic Production Report",
+      "description": "Table listing the domestic production of alcohol and tobacco by fiscal year (FY 1993 - FY 1995).",
+      "keyword": [
+        "Alcohol",
+        "tobacco",
+        "spirits",
+        "beer",
+        "wine",
+        "cigarettes",
+        "cigars",
+        "snuff",
+        "TTB"
+      ],
+      "modified": "1995-09-30",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "describedBy": "https://www.ttb.gov/glossary",
+      "landingPage": "https://www.ttb.gov/statistics/reports-and-data"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-4",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/foia/foia-logs",
+          "describedBy": "https://www.ttb.gov/foia",
+          "describedByType": "text/html",
+          "downloadURL": "https://www.ttb.gov/foia/foia-logs",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "R/P1Y",
+      "title": "Alcohol and Tobacco Tax and Trade Bureau (TTB) FOIA Request Logs",
+      "description": "This dataset contains a list of Freedom of Information Act (FOIA) requests for fiscal year 2010 that include the date requested, date received, requestor, file number, and information requested.",
+      "keyword": [
+        "FOIA",
+        "TTB"
+      ],
+      "modified": "2025-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:027"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "describedBy": "https://www.ttb.gov/foia",
+      "landingPage": "https://www.ttb.gov/foia/foia-logs"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-6",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/scientific-services-division/alcohol-fact-labeling-methods",
+          "describedBy": "https://www.ttb.gov/images/pdfs/2004_1_rulling_carbohydrate_calc.pdf",
+          "describedByType": "application/pdf",
+          "downloadURL": "https://www.ttb.gov/scientific-services-division/alcohol-fact-labeling-methods",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "Alcohol Fact Labeling Methods",
+      "description": "Methods used to verify calorie, fat, carbohydrate, and protein content statements on alcohol beverage labels and advertisements.",
+      "keyword": [
+        "Analytical methods",
+        "calorie",
+        "fat",
+        "carbohydrate",
+        "protein",
+        "alcohol beverage labels",
+        "TTB"
+      ],
+      "modified": "2021-09-24",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:027"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "describedBy": "https://www.ttb.gov/images/pdfs/2004_1_rulling_carbohydrate_calc.pdf",
+      "landingPage": "https://www.ttb.gov/scientific-services-division/alcohol-fact-labeling-methods",
+      "references": [
+        "https://www.ttb.gov/images/pdfs/rulings/2004-1.pdf"
+      ]
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-7",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/images/pdfs/statistics/95newa07.htm",
+          "describedBy": "https://www.ttb.gov/glossary",
+          "describedByType": "text/html",
+          "downloadURL": "https://www.ttb.gov/images/pdfs/statistics/95newa07.htm",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "R/P1Y",
+      "title": "Alcohol Fuel Production",
+      "description": "List of alcohol fuel production amounts as reported on ATF F 5110.75.",
+      "keyword": [
+        "alcohol",
+        "fuel",
+        "TTB"
+      ],
+      "modified": "1995-09-30",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "describedBy": "https://www.ttb.gov/glossary",
+      "landingPage": "https://www.ttb.gov/images/pdfs/statistics/95newa07.htm"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-8",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/wine/ava-map-explorer",
+          "downloadURL": "https://www.arcgis.com/sharing/rest/content/items/a1c35b4a3dd2426f911d918aebd8add1/info/metadata/metadata.xml?format=iso19115",
+          "mediaType": "text/xml",
+          "@type": "dcat:Distribution"
+        },
+        {
+          "accessURL": "https://www.ttb.gov/wine/ava-map-explorer",
+          "downloadURL": "https://www.ttb.gov/wine/ava-map-explorer",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution",
+          "conformsTo": "http://www.isotc211.org/2005/gmd"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "AVA Map Explorer",
+      "description": "Use the American Viticultural Area (AVA) Map Explorer to view the boundaries of all established and proposed AVAs. The Map Explorer has information about each AVA, including its state and county, when it was established, what other AVAs it contains or is within, and a link to its codified official boundary description. You can even plot an address on the Map Explorer to see if that location is within an AVA. You can also download \"shapefiles\" for the various AVAs, which you can use with geographic information system (GIS) software.",
+      "keyword": [
+        "viticultural",
+        "wine",
+        "map",
+        "GIS",
+        "AVA",
+        "geospatial"
+      ],
+      "theme": [
+        "geospatial"
+      ],
+      "modified": "2024-10-31",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Thornton, Karen",
+        "hasEmail": "mailto:RegulationsInquiries@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttb.gov/wine/ava-map-explorer"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-9",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/beer/statistics",
+          "describedBy": "https://www.ttb.gov/glossary",
+          "describedByType": "text/html",
+          "downloadURL": "https://www.ttb.gov/beer/statistics",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "R/P1M",
+      "title": "Beer Production and Operations Reports",
+      "description": "Yearly and monthly statistical releases taken directly from the Brewer's Report of Operations TTB F 5130.9 and the Quarterly Brewer's Report of Operations TTB F 5130.26.",
+      "keyword": [
+        "TTB",
+        "beer",
+        "brewer",
+        "brewpub"
+      ],
+      "modified": "2025-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "describedBy": "https://www.ttb.gov/glossary",
+      "landingPage": "https://www.ttb.gov/beer/statistics"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-10",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/scientific-services-division/beverage-alcohol-methods",
+          "downloadURL": "https://www.ttb.gov/scientific-services-division/beverage-alcohol-methods",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "Beverage Alcohol Methods",
+      "description": "Methods used to analyze alcohol beverages for the analytes listed in the table.",
+      "keyword": [
+        "Analytical methods",
+        "analyze alcohol",
+        "alcohol beverage",
+        "TTB"
+      ],
+      "modified": "2023-07-06",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:027"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttb.gov/scientific-services-division/beverage-alcohol-methods"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-11",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/distilled-spirits/statistics",
+          "describedBy": "https://www.ttb.gov/glossary",
+          "describedByType": "text/html",
+          "downloadURL": "https://www.ttb.gov/distilled-spirits/statistics",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "R/P1M",
+      "title": "Distilled Spirits Production and Operations Reports",
+      "description": "Monthly distilled spirits statistical release reports compiled using data from:\n\nMonthly Report of Processing (Denaturing) Operations Form 5110.43\nMonthly Report of Production Operations Form 5110.40\nMonthly Report of Processing Operations Form 5110.25\nMonthly Report of Storage Operations Form 5110.11",
+      "keyword": [
+        "Alcohol",
+        "distilled",
+        "spirits",
+        "production",
+        "processing",
+        "storage",
+        "denaturing",
+        "TTB"
+      ],
+      "modified": "2025-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "describedBy": "https://www.ttb.gov/glossary",
+      "landingPage": "https://www.ttb.gov/distilled-spirits/statistics"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-12",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/scientific-services-division/dbmenu3sub1",
+          "downloadURL": "https://www.ttb.gov/scientific-services-division/dbmenu3sub1",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "Drawback Tutorial",
+      "description": "Determining whether your product is unfit for beverage purposes has become much easier. The Nonbeverage Products Laboratory has developed several tools to streamline the process and remove the majority of subjectivity. Please use these guidelines and provide an unfit for beverage statement with your formula submissions.",
+      "keyword": [
+        "Flavors",
+        "TTB",
+        "nonbeverage",
+        "Unfit",
+        "limited_ingredients"
+      ],
+      "modified": "2023-06-01",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:027"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttb.gov/scientific-services-division/dbmenu3sub1"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-14",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/foia/foia-annual-reports",
+          "describedBy": "https://www.ttb.gov/glossary",
+          "describedByType": "text/html",
+          "downloadURL": "https://www.ttb.gov/foia/foia-annual-reports",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "R/P1Y",
+      "title": "Freedom of Information Act (FOIA) Annual Reports",
+      "description": "The Freedom of Information Act (FOIA) requires every Federal agency to submit a report to the Attorney General of the United States annually [pursuant to 5 U.S.C. 552(e)(1)], providing detailed information concerning the administration of the Act. TTB's submission is included in the Department of the Treasury's report.",
+      "keyword": [
+        "FOIA",
+        "annual reports",
+        "TTB"
+      ],
+      "modified": "2025-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:027"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "describedBy": "https://www.ttb.gov/glossary",
+      "landingPage": "https://www.ttb.gov/foia/foia-annual-reports"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-15",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/foia/list-of-permittees",
+          "downloadURL": "https://www.ttb.gov/foia/list-of-permittees",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "R/P1W",
+      "title": "Frequently Requested Listings",
+      "description": "As part of the Freedom of Information Act (FOIA), we are required to make available to the public records that are requested and released on a frequent basis. With that in mind, we publish a list of alcohol industry members who hold permits under the Federal Alcohol Administration Act. These permits allow production, bottling, importation, or distribution of beverage alcohol products.   This page also contains distilled spirits quarterly reports  (1st Qtr FY 15 thru 4th Qtr FY 17), spirits producer and bottler permit list (2010 \u2013 October 31, 2017), spirits producers and bottlers listing, 2012-2019 beverage spirits producers and bottlers by average taxable removals (in proof gallons), bonded wine producers count by state, and brewery count by state.",
+      "keyword": [
+        "spirits",
+        "producer",
+        "bottler",
+        "permit",
+        "brewery",
+        "wine",
+        "FOIA",
+        "TTB",
+        "alcohol",
+        "permittees",
+        "FAA",
+        "importation",
+        "distribution",
+        "Federal Alcohol Administration Act",
+        "Freedom of Information Act",
+        "alcohol industry members",
+        "beverage alcohol products"
+      ],
+      "modified": "2025-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttb.gov/foia/list-of-permittees"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-16",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/tax-audit/historical-tax-rates",
+          "describedBy": "https://www.ttb.gov/glossary",
+          "describedByType": "text/html",
+          "downloadURL": "https://www.ttb.gov/tax-audit/historical-tax-rates",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "Historical Tax Rates",
+      "description": "This dataset contains a list of historical tax rates for distilled spirits, wine, beer, and tobacco products.",
+      "keyword": [
+        "tax",
+        "rates",
+        "distilled",
+        "spirits",
+        "beer",
+        "wine",
+        "tobacco",
+        "TTB"
+      ],
+      "modified": "2013-12-23",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "describedBy": "https://www.ttb.gov/glossary",
+      "landingPage": "https://www.ttb.gov/tax-audit/historical-tax-rates"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-17",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/images/pdfs/statistics/95newa08.htm",
+          "describedBy": "https://www.ttb.gov/glossary",
+          "describedByType": "text/html",
+          "downloadURL": "https://www.ttb.gov/images/pdfs/statistics/95newa08.htm",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "Illicit Liquor (\"Moonshine\")",
+      "description": "Table that lists by fiscal year the number of stills seized, gallons of illicit spirits seized, and the gallons of mash seized.",
+      "keyword": [
+        "moonshine",
+        "liquor",
+        "stills",
+        "mash",
+        "spirits",
+        "TTB"
+      ],
+      "modified": "1995-09-30",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "describedBy": "https://www.ttb.gov/glossary",
+      "landingPage": "https://www.ttb.gov/images/pdfs/statistics/95newa08.htm"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-22",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/wine/list-of-pending-american-viticultural-areas-petitions",
+          "downloadURL": "https://www.ttb.gov/wine/list-of-pending-american-viticultural-areas-petitions",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "List of Pending American Viticultural Areas Petitions",
+      "description": "Listing of petitions to establish American Viticultural Areas (AVAs) that TTB has accepted as perfected in accordance with Part 9 of TTB regulations.",
+      "keyword": [
+        "viticultural",
+        "petition",
+        "wine"
+      ],
+      "modified": "2023-10-10",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:027"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttb.gov/wine/list-of-pending-american-viticultural-areas-petitions"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-32",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/what-we-do/enforcement/offers-in-compromise",
+          "downloadURL": "https://www.ttb.gov/what-we-do/enforcement/offers-in-compromise",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "Orders of revocation, suspension, or annulment of permits (PTP)",
+      "description": "Written determinations that remove regulated industry members\u2019 ability to legally operate under the Protect the Public program code.",
+      "keyword": [
+        "revocation",
+        "suspension",
+        "annulment",
+        "permit"
+      ],
+      "modified": "2020-07-31",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:027"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttb.gov/what-we-do/enforcement/offers-in-compromise"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-33",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/outreach/outreach-program",
+          "downloadURL": "https://www.ttb.gov/outreach/outreach-program",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "Outreach",
+      "description": "TTB is committed to facilitating voluntary compliance through education and outreach. View the upcoming events where you\u2019ll find us, or submit a request for TTB to participate in your event.",
+      "keyword": [
+        "outreach",
+        "webinars",
+        "conferences"
+      ],
+      "modified": "2023-06-22",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttb.gov/outreach/outreach-program"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-34",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/nrc/statistics-original-applications-to-operate",
+          "describedBy": "https://www.ttb.gov/glossary",
+          "describedByType": "text/html",
+          "downloadURL": "https://www.ttb.gov/nrc/statistics-original-applications-to-operate",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "R/P1D",
+      "title": "Permit Application Processing Times",
+      "description": "This information is compiled to show the average turnaround time it takes TTB to process applications to operate new businesses. This data pertains to the segment of applications which are received through TTB's electronic application system, Permits Online (PONL). The average number of days to process represents the average number of days elapsed from the date the National Revenue Center receives the application through the date that the applicant is approved to operate.",
+      "keyword": [
+        "permits",
+        "applications",
+        "PONL",
+        "TTB"
+      ],
+      "modified": "2025-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:027"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "describedBy": "https://www.ttb.gov/glossary",
+      "landingPage": "https://www.ttb.gov/nrc/statistics-original-applications-to-operate"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-36",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/formulation/fonl-processing-times",
+          "describedBy": "https://www.ttb.gov/formulation/fonl-processing-times",
+          "describedByType": "text/html",
+          "downloadURL": "https://www.ttb.gov/images/foia/form_stats.csv",
+          "mediaType": "text/csv",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "R/P1D",
+      "title": "Processing Times for Beverage Alcohol Formulas",
+      "description": "This current processing times chart shows up-to-date processing information for beverage alcohol formulas, both those that require sample analysis and those that do not. Use this chart, which we update daily, to estimate when your formula application is likely to be processed.",
+      "keyword": [
+        "TTB",
+        "alcohol formulation",
+        "beverage alcohol",
+        "sample analysis"
+      ],
+      "modified": "2025-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:027"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "describedBy": "https://www.ttb.gov/formulation/fonl-processing-times",
+      "landingPage": "https://www.ttb.gov/formulation/fonl-processing-times"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-37",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/labeling/processing-times",
+          "describedBy": "https://www.ttb.gov/labeling/processing-times#chart",
+          "describedByType": "text/html",
+          "downloadURL": "https://www.ttb.gov/images/foia/cola_stats.xml",
+          "mediaType": "text/xml",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "R/P1D",
+      "title": "Processing Times for Label Applications",
+      "description": "Table of current alcohol label processing times.",
+      "keyword": [
+        "alcohol",
+        "labels",
+        "processing times",
+        "TTB"
+      ],
+      "modified": "2025-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:027"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "describedBy": "https://www.ttb.gov/labeling/processing-times#chart",
+      "landingPage": "https://www.ttb.gov/labeling/processing-times"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-13",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/foia/electronic-reading-room",
+          "downloadURL": "https://www.ttb.gov/images/foia/xls/Quarterly-breakdown-of-FAET-collections.xlsx",
+          "mediaType": "application/vnd.ms-excel",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "R/P3M",
+      "title": "Quarterly breakdown of the Firearms and Ammunition Excise Tax (FAET) collections which are broken out between handguns, long guns, and ammunition (calculated per returns)",
+      "description": "Quarterly breakdown of the Firearms and Ammunition Excise Tax (FAET) collections which are broken out between handguns, long guns, and ammunition (calculated per returns)",
+      "keyword": [
+        "firearms",
+        "ammunition",
+        "excise tax",
+        "FAET",
+        "shells",
+        "cartridges"
+      ],
+      "modified": "2025-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttb.gov/foia/electronic-reading-room"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-44",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/tax-audit/tax-collections",
+          "describedBy": "https://www.ttb.gov/glossary",
+          "describedByType": "text/html",
+          "downloadURL": "https://www.ttb.gov/tax-audit/tax-collections",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "R/P3M",
+      "title": "Tax Collections-All",
+      "description": "This dataset consists of quarterly and annual statistical reports on taxes collected by TTB.",
+      "keyword": [
+        "Tax",
+        "taxes",
+        "wine",
+        "imported",
+        "domistic",
+        "customs",
+        "alcohol",
+        "tobacco",
+        "firearms",
+        "ammunition",
+        "beer",
+        "distilled",
+        "spirits",
+        "TTB"
+      ],
+      "modified": "2025-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "describedBy": "https://www.ttb.gov/glossary",
+      "landingPage": "https://www.ttb.gov/tax-audit/tax-collections"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-45",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/tax-audit/tax-and-fee-rates",
+          "describedBy": "https://www.ttb.gov/glossary",
+          "describedByType": "text/html",
+          "downloadURL": "https://www.ttb.gov/tax-audit/tax-and-fee-rates",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "Tax Rates",
+      "description": "Current tax rates for alcohol beverages, tobacco products, firearms and ammunition and information on filing taxes with TTB.",
+      "keyword": [
+        "Tax",
+        "taxes",
+        "wine",
+        "customs",
+        "alcohol",
+        "tobacco",
+        "firearms",
+        "ammunition",
+        "beer",
+        "distilled",
+        "spirits",
+        "cigarettes",
+        "cigars",
+        "snuff",
+        "paper",
+        "tubes",
+        "pistol",
+        "revolver",
+        "TTB"
+      ],
+      "modified": "2023-07-24",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "describedBy": "https://www.ttb.gov/glossary",
+      "landingPage": "https://www.ttb.gov/tax-audit/tax-and-fee-rates"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-47",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/tax-audit/excise-tax-and-export-due-dates",
+          "downloadURL": "https://www.ttb.gov/tax-audit/excise-tax-and-export-due-dates",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "Tax Returns and Reports Due Dates",
+      "description": "Schedule for annual, quarterly, semi-monthly, and FAET filers.   List of due dates for export documentation for industry members with approved export variances to maintain records on premises.",
+      "keyword": [
+        "excise",
+        "tax",
+        "export"
+      ],
+      "modified": "2023-01-20",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttb.gov/tax-audit/excise-tax-and-export-due-dates"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-48",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/scientific-services-division/tobacco-methods",
+          "downloadURL": "https://www.ttb.gov/scientific-services-division/tobacco-methods",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "Tobacco Methods",
+      "description": "References for methods used in tobacco tax classification.",
+      "keyword": [
+        "Tobacco",
+        "cigarettes",
+        "cigars",
+        "snuff",
+        "roll-your-own",
+        "pipe",
+        "export",
+        "analytical methods",
+        "TTB"
+      ],
+      "modified": "2021-10-08",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttb.gov/scientific-services-division/tobacco-methods"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-49",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/tobacco/tobacco-statistics",
+          "describedBy": "https://www.ttb.gov/glossary",
+          "describedByType": "text/html",
+          "downloadURL": "https://www.ttb.gov/tobacco/tobacco-statistics",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "R/P1M",
+      "title": "Tobacco Products Production and Operations Reports",
+      "description": "Monthly statistical reports on tobacco products production and operations. Data for Tobacco Statistical Release is derived directly from the Report \u2013 Manufacturer of Tobacco Products or Cigarette Papers and Tubes Form 5210.5.",
+      "keyword": [
+        "tobacco",
+        "cigarettes",
+        "cigars",
+        "snuff",
+        "roll-your-own",
+        "pipe",
+        "export",
+        "TTB"
+      ],
+      "modified": "2025-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "describedBy": "https://www.ttb.gov/glossary",
+      "landingPage": "https://www.ttb.gov/tobacco/tobacco-statistics"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-50",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/epayment",
+          "downloadURL": "https://www.ttb.gov/epayment",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "R/P1M",
+      "title": "TTB and Pay.gov Customer Support",
+      "description": "Statistics relating to the use of Pay.gov.",
+      "keyword": [
+        "statistics",
+        "pay.gov"
+      ],
+      "modified": "2025-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttb.gov/epayment"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-51",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/about-ttb/plans-and-reports-annual-reports",
+          "downloadURL": "https://www.ttb.gov/about-ttb/plans-and-reports-annual-reports",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "R/P1Y",
+      "title": "TTB Annual Reports",
+      "description": "Reports on TTB\u2019s  performance and financial information regarding its programs and operations to its customers and stakeholders.",
+      "keyword": [
+        "financial",
+        "budget"
+      ],
+      "modified": "2025-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:005"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttb.gov/about-ttb/plans-and-reports-annual-reports"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-52",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/scientific-services-division/dbmenu2sub3",
+          "downloadURL": "https://www.ttb.gov/scientific-services-division/dbmenu2sub3",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "TTB Form 5154.1 Worksheets",
+      "description": "Worksheets for calculating items 9 and 10, simple mixtures and filtrations, extracts, and dietary supplements on TTB Form 5154.1.",
+      "keyword": [
+        "Dietary supplements",
+        "flavors",
+        "flavoring extracts",
+        "TTB Form 5154.1",
+        "extracts",
+        "chemical mixtures",
+        "filtrations",
+        "TTB"
+      ],
+      "modified": "2021-06-10",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:027"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttb.gov/scientific-services-division/dbmenu2sub3"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-53",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/main-pages/presentations",
+          "downloadURL": "https://www.ttb.gov/main-pages/presentations",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "TTB Presentations",
+      "description": "TTB periodically participates in industry conferences and seminars to provide training or relevant TTB-related information. We also occasionally hold our own training events, such as webinars or seminars. We\u2019re sharing those presentations here for everyone\u2019s benefit. Choose from the topics below to see a listing of related presentations.",
+      "keyword": [
+        "wine",
+        "cider",
+        "beer",
+        "COLAs",
+        "firearms",
+        "ammunition",
+        "tax",
+        "alcohol",
+        "nonbeverage",
+        "distilled",
+        "spirits",
+        "trade_practices"
+      ],
+      "modified": "2023-05-17",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttb.gov/main-pages/presentations"
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-54",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttbonline.gov/colasonline/publicSearchColasBasic.do",
+          "downloadURL": "https://www.ttbonline.gov/colasonline/publicSearchColasBasic.do",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "TTB Public COLA Registry \u2013 View the details of a specific Certificate of Label Approval (COLA)",
+      "description": "Locate and view the approved, expired, surrendered, or revoked Certificate of Label Approval (COLA), via the COLA Public Registry.   The URL needs to be followed by the command: ?action=publicDisplaySearchBasic&ttbid=XXXXXXXXXXXXXX, where XXXXXXXXXXXXXX is the 14 character value for the COLA's TTB ID.",
+      "keyword": [
+        "COLAs Online",
+        "COLA Public Registry",
+        "TTB F 5100.31",
+        "Certificate of Label Approval",
+        "labels",
+        "alcohol beverage",
+        "ALFD",
+        "FOIA",
+        "TTB"
+      ],
+      "modified": "2025-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:027"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttbonline.gov/colasonline/publicSearchColasBasic.do",
+      "references": [
+        "https://www.ttb.gov/images/pdfs/labeling_colas-docs/display-cola-detail-through-public-cola-registry.pdf"
+      ]
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-55",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttbonline.gov/colasonline/publicSearchColasBasic.do",
+          "downloadURL": "https://www.ttbonline.gov/colasonline/publicSearchColasBasic.do",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "irregular",
+      "title": "TTB Public COLA Registry Search and Download \u2013 Extract data about COLAs that meet specified search criteria",
+      "description": "Locate, view and download the details associated with approved, expired, surrendered, or revoked Certificate of Label Approvals (COLAs), via the COLA Public Registry.",
+      "keyword": [
+        "COLAs Online",
+        "COLA Public Registry",
+        "TTB F 5100.31",
+        "Certificate of Label Approval",
+        "labels",
+        "alcohol beverage",
+        "ALFD",
+        "FOIA",
+        "TTB"
+      ],
+      "modified": "2014-02-06",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:027"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "landingPage": "https://www.ttbonline.gov/colasonline/publicSearchColasBasic.do",
+      "references": [
+        "https://www.ttb.gov/images/pdfs/labeling_colas-docs/save-search-results-in-public-cola-registry.pdf"
+      ]
+    },
+    {
+      "@type": "dcat:Dataset",
+      "identifier": "015-TTB-56",
+      "distribution": [
+        {
+          "accessURL": "https://www.ttb.gov/wine/wine-statistics",
+          "describedBy": "https://www.ttb.gov/glossary",
+          "describedByType": "text/html",
+          "downloadURL": "https://www.ttb.gov/wine/wine-statistics",
+          "mediaType": "text/html",
+          "@type": "dcat:Distribution"
+        }
+      ],
+      "accrualPeriodicity": "R/P1M",
+      "title": "Wine Statistics",
+      "description": "Data for Wine Statistical Releases is derived directly from the Report of Wine Premises Operations Form 5120.17. This form must be filed with TTB 15 days after the close of the period. The Wine Statistical Release report is generated approximately 45 days after the due date.",
+      "keyword": [
+        "TTB",
+        "wine",
+        "statistical",
+        "form5120.17"
+      ],
+      "modified": "2025-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "subOrganizationOf": {
+          "@type": "org:Organization",
+          "subOrganizationOf": {
+            "@type": "org:Organization",
+            "name": "Department of the Treasury"
+          },
+          "name": "TTB"
+        },
+        "name": "TTB"
+      },
+      "contactPoint": {
+        "fn": "Mason, Quinton",
+        "hasEmail": "mailto:ttbfoia@ttb.gov"
+      },
+      "accessLevel": "public",
+      "bureauCode": [
+        "015:13"
+      ],
+      "programCode": [
+        "015:026"
+      ],
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "describedBy": "https://www.ttb.gov/glossary",
+      "landingPage": "https://www.ttb.gov/wine/wine-statistics"
+    }
+  ]
+}

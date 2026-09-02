@@ -1,0 +1,62 @@
+generated: '2026-09-01'
+method: searched
+source: https://www.ttb.gov/data
+note: >-
+  TTB ships no versioned API, so there is no versioning scheme, no deprecation policy and no
+  SLA to record. What TTB does publish is a dataset refresh cadence, declared per record in the
+  Treasury DCAT-US catalog as accrualPeriodicity, and observable in the daily feeds. No
+  StatusPage or Deprecation pointer is emitted because neither surface exists.
+versioning:
+  scheme: none
+  current: null
+  docs: null
+  evidence: >-
+    No API version appears in any URL, header or document. Dataset files are versioned only by
+    the dated path segment of their upload (e.g. /system/files/2025-05/Beer_National_Report_JSON.json),
+    which changes without notice or redirect when a new vintage is posted.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  evidence: >-
+    No deprecation or sunset policy published. Observed in this pass: six URLs previously
+    recorded for TTB (/open-government/open-data, /labeling/cola-registry,
+    /permitting/permits-online, /about-ttb/laws-and-regulations, /about-ttb/foia, and the
+    /labeling/processing-times and /formulation/fonl-processing-times landing pages still cited
+    by the live Treasury DCAT-US catalog) now return HTTP 404 with no redirect to their
+    successors. TTB reorganised its site without 301s.
+sla:
+  url: null
+  uptime_target: null
+status_page:
+  url: null
+  evidence: >-
+    None found. https://status.ttb.gov does not resolve; https://www.ttb.gov/status returns 404.
+    A candidate at https://ttb.statuspage.io returns HTTP 200 titled "TTB Services" but was
+    REJECTED on ownership: its components are "Minecraft Server", "wiki.thetechboy.net
+    redirect", "Luciano Nissan GT-R Website" and "Main game" — it belongs to an unrelated
+    hobbyist using the initials TTB, not to the Alcohol and Tobacco Tax and Trade Bureau.
+  rejected_candidates:
+    - url: https://ttb.statuspage.io
+      http_status: 200
+      reason: different-owner
+      evidence: >-
+        https://ttb.statuspage.io/api/v2/summary.json lists gaming and personal-wiki components
+        with no reference to alcohol, tobacco, tax or Treasury; not linked from any ttb.gov page.
+refresh_cadence:
+  source: https://www.treasury.gov/data.json
+  entries:
+    - dataset: Processing Times for Label Applications (015-TTB-37)
+      accrual_periodicity: R/P1D
+      feed: https://www.ttb.gov/images/foia/cola_stats.xml
+      observed_creation_date: '2026-09-01T07:04:01'
+    - dataset: Processing Times for Beverage Alcohol Formulas (015-TTB-36)
+      accrual_periodicity: R/P1D
+      feed: https://www.ttb.gov/images/foia/form_stats.csv
+      observed_creation_date: '2026-09-01 07:04 AM'
+    - dataset: Permit Application Processing Times (015-TTB-34)
+      accrual_periodicity: R/P1D
+      landing: https://www.ttb.gov/nrc/statistics-original-applications-to-operate
+    - dataset: TTB Public COLA Registry (015-TTB-54, 015-TTB-55)
+      accrual_periodicity: irregular
+      landing: https://www.ttbonline.gov/colasonline/publicSearchColasBasic.do
+deprecated_operations: []

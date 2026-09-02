@@ -1,0 +1,120 @@
+generated: '2026-09-01'
+method: searched
+source: >-
+  https://www.ttb.gov/data ; https://www.treasury.gov/data.json ;
+  live probes of the TTB open-data feeds, 2026-09-01
+note: >-
+  TTB has no request/response API in the usual sense. Its machine-readable surface is a set of
+  static files served over HTTPS plus one documented query-string lookup on the COLA Public
+  Registry. The cross-cutting semantics below are recorded as they actually are, including the
+  several that are structurally not applicable to a read-only file distribution. No Idempotency
+  pointer is emitted, because there is no write surface and therefore no idempotency contract.
+surface_type: static-file-distribution + query-string-lookup
+authentication:
+  style: none
+  detail: >-
+    Anonymous HTTPS GET. No key, token or account. See
+    authentication/alcohol-and-tobacco-tax-and-trade-bureau-authentication.yml.
+transport:
+  protocol: https
+  tls: TLSv1.3
+  hsts: true
+  hsts_max_age: 31536000
+  host: www.ttb.gov
+  cdn: Akamai (www.ttb.gov.edgekey.net)
+content_negotiation:
+  supported: false
+  detail: >-
+    Format is chosen by picking a different file, not by an Accept header. The same dataset is
+    published as separate .json, .csv and .xml artefacts with distinct URLs.
+  observed_media_types:
+    - application/xml
+    - text/csv; charset=UTF-8
+    - application/json
+url_conventions:
+  pattern_static: https://www.ttb.gov/system/files/<YYYY-MM>/<Dataset_Name>.<ext>
+  pattern_legacy_alias: https://www.ttb.gov/images/foia/<name>.<ext>
+  note: >-
+    The /images/foia/ paths still cited by the Treasury DCAT-US catalog are live and 302 to
+    /system/files?file=images/foia/<name>.<ext>. The dated /system/files/<YYYY-MM>/ segment is
+    part of the identity of a file vintage, so a client that hardcodes one silently pins an old
+    dataset when a new vintage is posted under a new date segment.
+query_interface:
+  - name: COLA Public Registry lookup by TTB ID
+    endpoint: https://www.ttbonline.gov/colasonline/publicSearchColasBasic.do
+    method: GET
+    parameters:
+      - name: action
+        required: true
+        value: publicDisplaySearchBasic
+      - name: ttbid
+        required: true
+        format: 14-character TTB ID
+    response_media_type: text/html
+    documented_at: https://www.treasury.gov/data.json
+    documented_in: 'DCAT-US record 015-TTB-54 (description field)'
+    note: >-
+      The only parameterised, addressable lookup TTB documents. It returns rendered HTML, not
+      JSON or XML, so a consumer must scrape. Verified 2026-09-01: HTTP 200, text/html.
+pagination:
+  style: none
+  detail: Whole-file downloads; no cursor, offset or page parameter anywhere.
+filtering_and_sorting:
+  supported: false
+  detail: >-
+    Server-side filtering is only available through the COLA Registry's interactive HTML search
+    form. The bulk datasets must be filtered client-side after download.
+field_expansion:
+  supported: false
+metadata:
+  supported: true
+  detail: >-
+    Per-dataset metadata is published in DCAT-US 1.1 form inside the Treasury catalog
+    (identifier, accrualPeriodicity, contactPoint, license, bureauCode, programCode). See
+    json-ld/alcohol-and-tobacco-tax-and-trade-bureau-dcat-us.jsonld.
+request_tracing:
+  request_id_header: null
+  supported: false
+versioning:
+  style: none
+  detail: See lifecycle/alcohol-and-tobacco-tax-and-trade-bureau-lifecycle.yml.
+error_envelope:
+  format: html
+  detail: >-
+    A missing file returns the standard TTB Drupal 404 HTML page (about 58 KB) with
+    Content-Type text/html — never a structured error body. A client must check the status code
+    and the content type, because a 404 body is large and looks like a successful page fetch to
+    anything that only checks for a non-empty response.
+rate_limit_signaling:
+  headers: []
+  status_on_exhaustion: null
+  detail: >-
+    No RateLimit-*, X-RateLimit-* or Retry-After header observed on any TTB response. See
+    rate-limits/alcohol-and-tobacco-tax-and-trade-bureau-rate-limits.yml.
+idempotency:
+  supported: na
+  detail: >-
+    Not applicable. The public surface is read-only: every documented interaction is a GET.
+    There is no write, no create and no submit endpoint outside the authenticated TTB Online
+    web applications, which expose no programmatic interface at all.
+dry_run_mode:
+  supported: na
+  detail: Not applicable — no write surface to rehearse.
+reversibility:
+  supported: na
+  grade: na
+  detail: >-
+    Not applicable. TTB's public machine-readable surface has no write operations, so there is
+    nothing an agent can do here that would need taking back. The bureau's genuinely
+    consequential actions — filing a permit application in Permits Online, submitting a label
+    for COLA approval, withdrawing or amending a filing — happen exclusively inside
+    authenticated web applications with no API, so their reversal windows (which TTB does
+    document in prose for human filers) cannot be reached or reasoned about programmatically
+    and are deliberately NOT asserted here as an API contract.
+  write_surfaces: []
+cross_links:
+  authentication: authentication/alcohol-and-tobacco-tax-and-trade-bureau-authentication.yml
+  lifecycle: lifecycle/alcohol-and-tobacco-tax-and-trade-bureau-lifecycle.yml
+  rate_limits: rate-limits/alcohol-and-tobacco-tax-and-trade-bureau-rate-limits.yml
+  conformance: conformance/alcohol-and-tobacco-tax-and-trade-bureau-conformance.yml
+  catalog: json-ld/alcohol-and-tobacco-tax-and-trade-bureau-dcat-us.jsonld

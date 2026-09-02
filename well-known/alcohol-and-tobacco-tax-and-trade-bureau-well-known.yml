@@ -1,0 +1,134 @@
+generated: '2026-09-01'
+method: probed
+source: live GET of each named /.well-known/ path against every host named in apis.yml
+note: >-
+  Every named path was probed on all three TTB hosts. Nothing was served. www.ttb.gov
+  (Akamai-fronted Drupal) returns its standard 404 page for every path. ttbonline.gov is a
+  CATCH-ALL that answers HTTP 200 with an HTML application shell for every /.well-known/*
+  request, including a negative-control path that cannot exist — path_echo_control failed,
+  so every "200" on that host is discarded and counted as a miss. data.ttb.gov, which the
+  previous apis.yml asserted as a Socrata data portal, does NOT RESOLVE (NXDOMAIN) and could
+  not be probed at all. hit_count is 0 and NO WellKnown or SecurityTxt pointer is emitted.
+hit_count: 0
+hosts:
+  - host: https://www.ttb.gov
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /.well-known/aauth-resource.json
+        status: 404
+    soft_404_control:
+      path: /.well-known/alcohol-and-tobacco-tax-and-trade-bureau-negative-control-7f3ab91c.json
+      status: 404
+      bytes: 58372
+      result: passed
+  - host: https://www.ttbonline.gov
+    path_echo_control: failed
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        content_type: text/html
+        bytes: 44731
+        file: null
+        note: HTML application shell, not a document — discarded by the negative control
+      - path: /.well-known/openid-configuration
+        status: 200
+        content_type: text/html
+        bytes: 45459
+        file: null
+        note: HTML application shell, not a document — discarded by the negative control
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        content_type: text/html
+        bytes: 47479
+        file: null
+        note: HTML application shell, not a document — discarded by the negative control
+      - path: /.well-known/oauth-protected-resource
+        status: 200
+        content_type: text/html
+        bytes: 46519
+        file: null
+        note: HTML application shell, not a document — discarded by the negative control
+      - path: /.well-known/api-catalog
+        status: 200
+        content_type: text/html
+        bytes: 45067
+        file: null
+        note: HTML application shell, not a document — discarded by the negative control
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        content_type: text/html
+        bytes: 44119
+        file: null
+        note: HTML application shell, not a document — discarded by the negative control
+      - path: /.well-known/agent-card.json
+        status: 200
+        content_type: text/html
+        bytes: 45663
+        file: null
+        note: HTML application shell, not a document — discarded by the negative control
+      - path: /.well-known/agent.json
+        status: 200
+        content_type: text/html
+        bytes: 44583
+        file: null
+        note: HTML application shell, not a document — discarded by the negative control
+      - path: /.well-known/aauth-resource.json
+        status: 200
+        content_type: text/html
+        bytes: 42519
+        file: null
+        note: HTML application shell, not a document — discarded by the negative control
+    soft_404_control:
+      path: /.well-known/alcohol-and-tobacco-tax-and-trade-bureau-negative-control-7f3ab91c.json
+      status: 200
+      bytes: 47431
+      result: failed
+      note: >-
+        A path that cannot exist returned 200 with an HTML body of comparable size to every
+        other probe. ttbonline.gov is a catch-all; no /.well-known/ hit on this host is real.
+  - host: https://data.ttb.gov
+    resolves: false
+    dns: NXDOMAIN
+    documents:
+      - path: /.well-known/security.txt
+        status: null
+        note: host does not resolve — no request could be issued
+      - path: /.well-known/openid-configuration
+        status: null
+        note: host does not resolve — no request could be issued
+      - path: /.well-known/oauth-authorization-server
+        status: null
+        note: host does not resolve — no request could be issued
+      - path: /.well-known/oauth-protected-resource
+        status: null
+        note: host does not resolve — no request could be issued
+      - path: /.well-known/api-catalog
+        status: null
+        note: host does not resolve — no request could be issued
+      - path: /.well-known/ai-plugin.json
+        status: null
+        note: host does not resolve — no request could be issued
+      - path: /.well-known/agent-card.json
+        status: null
+        note: host does not resolve — no request could be issued
+      - path: /.well-known/agent.json
+        status: null
+        note: host does not resolve — no request could be issued
+      - path: /.well-known/aauth-resource.json
+        status: null
+        note: host does not resolve — no request could be issued

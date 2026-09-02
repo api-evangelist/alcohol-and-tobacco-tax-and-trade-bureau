@@ -1,0 +1,94 @@
+generated: '2026-09-01'
+method: searched
+source: https://www.treasury.gov/data.json
+docs: https://www.ttb.gov/data
+note: >-
+  TTB publishes no OpenAPI, GraphQL, AsyncAPI, gRPC or WSDL contract, so every contract-level
+  standard below is asserted false on evidence rather than left unknown. The one standard TTB
+  genuinely conforms to is the U.S. federal open-data metadata standard: 34 TTB-published
+  dataset records appear in the Department of the Treasury Project Open Data / DCAT-US 1.1
+  catalog with publisher.name "TTB". No published compliance program (SOC 2, ISO 27001,
+  FedRAMP) was found on any TTB surface, so no Compliance pointer is emitted.
+standards:
+  - id: project-open-data-1.1
+    name: Project Open Data Metadata Schema v1.1 (DCAT-US)
+    conforms: true
+    domain_standard: true
+    sector: government
+    evidence: >-
+      34 dataset records with "publisher": {"name": "TTB", "subOrganizationOf": {"name":
+      "Department of the Treasury"}} in https://www.treasury.gov/data.json (HTTP 200,
+      502,658 bytes, fetched 2026-09-01). Catalog declares
+      conformsTo https://project-open-data.cio.gov/v1.1/schema and
+      @context https://project-open-data.cio.gov/v1.1/schema/catalog.jsonld.
+      Records carry the full required POD element set: identifier (015-TTB-*),
+      accessLevel, bureauCode (015:13), programCode (015:027), contactPoint,
+      accrualPeriodicity, distribution[] and license.
+    evidence_url: https://www.treasury.gov/data.json
+    artifact: json-ld/alcohol-and-tobacco-tax-and-trade-bureau-dcat-us.jsonld
+  - id: dcat
+    name: W3C Data Catalog Vocabulary (DCAT)
+    conforms: true
+    evidence: >-
+      TTB dataset records are typed dcat:Dataset with dcat:Distribution children inside the
+      Treasury dcat:Catalog; DCAT-US 1.1 is the federal profile of DCAT.
+    evidence_url: https://www.treasury.gov/data.json
+  - id: cc0-1.0
+    name: Creative Commons CC0 1.0 Public Domain Dedication
+    conforms: true
+    evidence: >-
+      Every TTB dataset record declares
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/".
+    evidence_url: https://www.treasury.gov/data.json
+  - id: openapi
+    name: OpenAPI Specification
+    conforms: false
+    evidence: >-
+      /openapi.json, /swagger.json and /api-docs return the site 404 page on www.ttb.gov;
+      data.ttb.gov does not resolve; ttbonline.gov is a catch-all that answers 200 with HTML
+      for any path and failed a negative-control probe.
+  - id: graphql
+    name: GraphQL
+    conforms: false
+    evidence: No /graphql surface named in any TTB documentation or dataset record.
+  - id: asyncapi
+    name: AsyncAPI
+    conforms: false
+    evidence: >-
+      No event, streaming or webhook surface is published. Update notification is a GovDelivery
+      email subscription (service.govdelivery.com/accounts/USTTB), not a machine event surface.
+  - id: oauth2
+    name: OAuth 2.0
+    conforms: false
+    evidence: >-
+      No securitySchemes exist (no spec). /.well-known/oauth-authorization-server returns 404 on
+      www.ttb.gov. The COLAs Online and Permits Online applications use form-based session login.
+  - id: oidc
+    name: OpenID Connect
+    conforms: false
+    evidence: /.well-known/openid-configuration returns 404 on www.ttb.gov.
+  - id: rfc9457-problem-details
+    name: RFC 9457 Problem Details for HTTP APIs
+    conforms: false
+    evidence: No API returns application/problem+json; the public surface is static files and HTML.
+  - id: rfc9116-security-txt
+    name: RFC 9116 security.txt
+    conforms: false
+    evidence: /.well-known/security.txt returns 404 on www.ttb.gov.
+  - id: rfc8594-sunset-header
+    name: RFC 8594 Sunset HTTP Header
+    conforms: false
+    evidence: No deprecation or sunset policy is published for any TTB data surface.
+  - id: soap-wsdl
+    name: SOAP / WSDL
+    conforms: false
+    evidence: >-
+      Not probeable on ttbonline.gov — that host answers 200 with HTML for every path, so a
+      ?wsdl probe there cannot distinguish a hit from the catch-all. No WSDL is referenced in
+      any TTB document.
+  - id: json-schema
+    name: JSON Schema
+    conforms: false
+    evidence: >-
+      The published JSON datasets (Beer, Wine, Distilled Spirits, Tobacco national reports)
+      ship with no schema document; column meaning is carried in prose on the statistics pages.
