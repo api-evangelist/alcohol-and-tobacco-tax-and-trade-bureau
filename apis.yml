@@ -5,7 +5,7 @@ name: Alcohol and Tobacco Tax and Trade Bureau
 tags:
   - Alcohol
   - Tobacco
-  - Federal-Government
+  - Federal Government
   - Excise Tax
   - Regulations
   - Treasury
@@ -16,6 +16,7 @@ tags_raw:
   - Excise Tax
   - Regulation
   - Treasury
+  - Federal-Government
 kind: contract
 deliveryModel:
   model: unknown
@@ -68,7 +69,6 @@ apis:
       - Statistics
       - DCAT-US
     humanURL: https://www.ttb.gov/data
-    baseURL: https://www.ttb.gov
     description: >-
       TTB's open data surface is a set of static, anonymously downloadable files rather than a
       request/response API. Production and operations reports for beer, wine, distilled spirits
