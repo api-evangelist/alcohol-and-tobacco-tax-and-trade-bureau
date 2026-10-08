@@ -155,6 +155,8 @@ apis:
         url: https://www.ttb.gov/nrc/statistics-original-applications-to-operate
 
 common:
+  - type: FinOps
+    url: finops/alcohol-and-tobacco-tax-and-trade-bureau-finops.yml
   - url: https://www.ttb.gov/rss.xml
     type: BlogRSS
   - type: Website
