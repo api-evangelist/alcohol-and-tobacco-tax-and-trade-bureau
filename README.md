@@ -1,4 +1,4 @@
-# Alcohol and Tobacco Tax and Trade Bureau (alcohol-and-tobacco-tax-and-trade-bureau)
+# Alcohol and Tobacco Tax and Trade Bureau
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,106 +66,112 @@
 
 The Alcohol and Tobacco Tax and Trade Bureau (TTB), statutorily named the Tax and Trade Bureau, is a bureau of the United States Department of the Treasury. TTB regulates and collects federal excise taxes on alcohol, tobacco, firearms, and ammunition. The bureau enforces Federal laws and regulations related to alcohol and tobacco products, issues permits for producers, importers, and wholesalers, approves label applications for alcohol beverages, and provides open data on tax collections, permit holders, and approved product labels. TTB administers approximately $20 billion in annual federal excise tax collections from the alcohol and tobacco industries.
 
-**URL:** [https://raw.githubusercontent.com/api-evangelist/alcohol-and-tobacco-tax-and-trade-bureau/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/alcohol-and-tobacco-tax-and-trade-bureau/refs/heads/main/apis.yml)
+**Areas:** Alcohol · Tobacco · Federal Government · Excise Tax · Regulations · Treasury
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Alcohol and Tobacco Tax and Trade Bureau on APIs.io
 
-## Tags:
+Everything profiled for Alcohol and Tobacco Tax and Trade Bureau is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/alcohol-and-tobacco-tax-and-trade-bureau/](https://apis.io/providers/alcohol-and-tobacco-tax-and-trade-bureau/)** — or go straight to one of the APIs or properties below.
 
- - Alcohol, Tobacco, Federal Government, Excise Tax, Regulation, Treasury
+### APIs (3)
 
-## Timestamps
+- [TTB Open Data](https://apis.io/apis/alcohol-and-tobacco-tax-and-trade-bureau/ttb-open-data-api/) — TTB's open data surface is a set of static, anonymously downloadable files rather than a request/response API. Production and operations reports for beer,…
+- [TTB Public COLA Registry](https://apis.io/apis/alcohol-and-tobacco-tax-and-trade-bureau/ttb-cola-registry/) — The Public COLA Registry holds every approved, expired, surrendered or revoked Certificate of Label Approval (TTB F 5100.31) for wine, distilled spirits and…
+- [TTB Permits Online (PONL)](https://apis.io/apis/alcohol-and-tobacco-tax-and-trade-bureau/ttb-permits-online/) — Permits Online is the electronic system for applying for and maintaining federal basic permits, brewer's notices, distilled spirits plant registrations and…
 
-- **Created:** 2024-11-21T00:00:00.000Z
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### TTB Open Data API
-The TTB Open Data API provides programmatic access to TTB statistical and regulatory datasets via the Socrata Open Data API (SODA). Available datasets include alcohol beverage tax collections by commodity and state, federal basic permit holders, approved Certificate of Label Approval (COLA) records, and brewery/winery/distillery permit data. The SODA API supports filtering, sorting, pagination, and JSON/CSV output formats.
+#### JSON-LD (1)
 
-**Human URL:** [https://www.ttb.gov/open-government/open-data](https://www.ttb.gov/open-government/open-data)
+Linked-data contexts for the provider's vocabulary.
 
-#### Tags:
+- [Alcohol And Tobacco Tax And Trade Bureau Dcat Us Context](https://apis.io/jsonld/alcohol-and-tobacco-tax-and-trade-bureau/alcohol-and-tobacco-tax-and-trade-bureau-dcat-us/)
 
- - Open Data, Socrata, Excise Tax
+#### Security (2)
 
-#### Properties
+Authentication, trust centre, and vulnerability disclosure.
 
-- [DataAPI](https://data.ttb.gov/resource/)
+- [Alcohol And Tobacco Tax And Trade Bureau Authentication](https://apis.io/security/alcohol-and-tobacco-tax-and-trade-bureau/alcohol-and-tobacco-tax-and-trade-bureau-authentication/)
+- [Alcohol And Tobacco Tax And Trade Bureau Domain Security](https://apis.io/security/alcohol-and-tobacco-tax-and-trade-bureau/alcohol-and-tobacco-tax-and-trade-bureau-domain-security/)
 
-### TTB COLA Registry
-The TTB Public COLA (Certificate of Label Approval) Registry provides access to approved alcohol beverage labels. Users and industry members can search for approved labels by product type, brand name, filer name, and approval date. The registry covers wine, distilled spirits, and malt beverage label approvals required before commercial sale in interstate or foreign commerce.
+#### Plans and pricing (1)
 
-**Human URL:** [https://www.ttb.gov/labeling/cola-registry](https://www.ttb.gov/labeling/cola-registry)
+Published plans, tiers and prices.
 
-#### Tags:
+- [Alcohol And Tobacco Tax And Trade Bureau Plans Pricing](https://apis.io/plans/alcohol-and-tobacco-tax-and-trade-bureau/alcohol-and-tobacco-tax-and-trade-bureau-plans-pricing/)
 
- - Alcohol Beverage Labels, COLA, Open Data
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [DataAPI](https://www.ttb.gov/labeling/cola-registry)
+- [Alcohol And Tobacco Tax And Trade Bureau Rate Limits](https://apis.io/rate-limits/alcohol-and-tobacco-tax-and-trade-bureau/alcohol-and-tobacco-tax-and-trade-bureau-rate-limits/)
 
-### TTB Permits Online
-TTB Permits Online is the electronic portal for applying for and managing federal basic permits, brewer's notices, distilled spirits plant permits, and tobacco permits. The system allows industry members to submit permit applications, file operational reports, and pay federal excise taxes electronically. Permit status and holder data are published as open data.
+#### FinOps (1)
 
-**Human URL:** [https://www.ttb.gov/permitting/permits-online](https://www.ttb.gov/permitting/permits-online)
+What the API costs to run, by operation.
 
-#### Tags:
+- [Alcohol And Tobacco Tax And Trade Bureau Finops](https://apis.io/finops/alcohol-and-tobacco-tax-and-trade-bureau/alcohol-and-tobacco-tax-and-trade-bureau-finops/)
 
- - Permits, Licensing, Alcohol, Tobacco
+## Where to find this API
 
-#### Properties
-
-- [GovernmentAPI](https://www.ttb.gov/permitting/permits-online)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.ttb.gov)
-- [Portal](https://www.ttb.gov/open-government/open-data)
-- [DataPortal](https://data.ttb.gov)
-- [Documentation](https://www.ttb.gov/about-ttb/laws-and-regulations)
-- [Contact](https://www.ttb.gov/contact)
-- [PrivacyPolicy](https://www.ttb.gov/about-ttb/privacy-policy)
-- [FOIA](https://www.ttb.gov/about-ttb/foia)
-- [GitHubOrganization](https://github.com/ttb-gov)
+- [Documentation](https://www.ttb.gov/statistics/reports-and-data)
+- [Getting started](https://www.ttb.gov/public-information/researcher-resources)
+- [Support](https://www.ttb.gov/about-ttb/contact-us)
+- [Privacy policy](https://www.ttb.gov/about-ttb/privacy-policy)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Excise Tax Data | Annual and monthly federal excise tax collections broken down by alcohol and tobacco commodity type and by state. |
-| COLA Registry | Public searchable database of all approved Certificate of Label Approval (COLA) records for wine, spirits, and malt beverages. |
-| Permit Holder Data | Open data on federal basic permit holders including producers, importers, wholesalers, and retailers of alcohol beverages. |
-| Socrata SODA API | TTB datasets are published on the Socrata platform, accessible via the standard Socrata Open Data API (SODA) with JSON and CSV output. |
-| Statistical Reports | Annual statistical reports on alcohol and tobacco tax collections, industry production volumes, and commodity statistics. |
-| eFOIA Portal | Electronic Freedom of Information Act (eFOIA) request submission and tracking for TTB records not available through open data. |
+**Kin Score 23.5** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 69.6 |
+| Contract quality | 6.7 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 47.6 |
+| Access clarity | 10.5 |
 
-| Name | Description |
-|------|-------------|
-| Alcohol Industry Compliance Research | Producers, importers, and retailers use TTB permit and label data to verify compliance status and competitive market intelligence. |
-| Tax Revenue Analysis | Policy researchers and economists analyze TTB excise tax collection data to study alcohol and tobacco market trends. |
-| Label Approval Tracking | Alcohol beverage companies track COLA approval status and research competitor label approvals in the public registry. |
-| Market Research | Industry analysts use production volume statistics and permit holder counts to assess market size and industry structure. |
-| Academic Research | Public health researchers use TTB consumption proxy data (tax collection volumes) to study alcohol consumption patterns. |
-| Journalism and FOIA Research | Journalists and public interest groups use TTB open data and FOIA to investigate regulatory compliance and enforcement actions. |
+**Agent readiness 5.0** — human-only
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-| Name | Description |
-|------|-------------|
-| api.data.gov | TTB datasets are accessible through api.data.gov, the government-wide API management platform hosted by GSA. |
-| Data.gov Catalog | TTB open datasets are cataloged on data.gov, the federal open data portal managed by GSA. |
-| Socrata Open Data Platform | TTB uses the Socrata platform (data.ttb.gov) to publish and provide API access to regulatory datasets. |
-| IRS | TTB coordinates with the Internal Revenue Service on excise tax administration and data sharing. |
-| CBP (US Customs) | TTB coordinates with U.S. Customs and Border Protection on alcohol and tobacco import regulation and taxation. |
-| ATF | TTB works with the Bureau of Alcohol, Tobacco, Firearms and Explosives on shared jurisdiction over alcohol and tobacco regulation. |
+**Regulatory alignment 20.6** — Government & Public Sector
 
-## Maintainers
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/alcohol-and-tobacco-tax-and-trade-bureau/](https://apis.io/providers/alcohol-and-tobacco-tax-and-trade-bureau/).
 
-**FN:** Kin Lane
+## How this profile is made
 
-**Email:** kin@apievangelist.com
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Alcohol and Tobacco Tax and Trade Bureau: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/alcohol-and-tobacco-tax-and-trade-bureau/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
