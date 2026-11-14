@@ -20,6 +20,12 @@ artifacts:
   heartbeat/2026-11-02.yml:
     method: unknown
     evidence: no authorship recorded
+  heartbeat/2026-11-06.yml:
+    method: unknown
+    evidence: no authorship recorded
+  heartbeat/2026-11-13.yml:
+    method: unknown
+    evidence: no authorship recorded
   integrations/_index.yml:
     method: generated
     evidence: carries an API Evangelist house phrase
@@ -32,7 +38,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -101,6 +107,9 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   lifecycle/alcohol-and-tobacco-tax-and-trade-bureau-lifecycle.yml:
     method: searched
     evidence: declared in the artifact
@@ -115,6 +124,9 @@ artifacts:
     evidence: declared in the artifact
   plans/alcohol-and-tobacco-tax-and-trade-bureau-plans-pricing.yml:
     method: searched
+    evidence: declared in the artifact
+  privacy/alcohol-and-tobacco-tax-and-trade-bureau-privacy-policy.yml:
+    method: harvested
     evidence: declared in the artifact
   rate-limits/alcohol-and-tobacco-tax-and-trade-bureau-rate-limits.yml:
     method: searched
